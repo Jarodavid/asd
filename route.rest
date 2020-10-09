@@ -1,0 +1,60 @@
+GET http://localhost:3000/students
+###
+
+
+GET http://localhost:3000/students/5f7f7cc70d90cc19e4822e8d
+
+
+###
+
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+    "name": "",
+    "studentId": "",
+    "course": ""
+}
+
+###
+
+DELETE http://localhost:3000/students/5f53482a3622293a7410bddf
+
+###
+PATCH  http://localhost:3000/students/5f7b14732c3c6c4174299d06
+Content-Type: application/json
+
+{
+    "name" : "",
+    "studentId": "",
+    "course": ""
+}
+
+###
+GET http://localhost:3000/companies
+###
+GET http://localhost:3000/companies/5f7b1ad82c3c6c4174299d23
+###
+POST http://localhost:3000/companies/5f7ab9a23015902d48d7a485 
+Content-Type: application/json
+
+{
+    "company_name":"Coca-Cola Femsa Philippines Inc. Bacolod Plant",
+    "company_address":"Murica Road, Barangay Mansilingan Bcaolod City, Negros Occidental",
+    "course":[
+        "CPE"
+    ]
+}
+
+###
+PATCH  http://localhost:3000/companies/5f7ab9a23015902d48d7a485
+Content-Type: application/json
+
+{
+    "company_name": "",
+    "company_address":"",
+    "course": [
+        ""
+    ]
+}
+
