@@ -1,5 +1,3 @@
-const { removeAllListeners } = require("nodemon");
-
 const mongoose = require("mongoose");
 
 
