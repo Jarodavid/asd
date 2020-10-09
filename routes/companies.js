@@ -67,7 +67,7 @@ async function getCompany(req, res, next){
     res.company = company
     next()
 }
-
+ 
 
 
 module.exports = router;
