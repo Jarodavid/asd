@@ -2,6 +2,20 @@ const express = require("express");
 const router = express.Router();
 const Company = require('../model/company');
 
+//Getting info by Course
+router.get('/',async(req,res) => {
+    let searchOptions = {}
+    if(req.query.course != null && req.query.course !== '') {
+        searchOptions.course = new RegExp(req.query.course, 'i')
+    }
+    try{
+        const companies = await Company.find(searchOptions)
+        res.json(companies)
+    }catch(err){
+        res.status(500).json({message:err.message})
+    }
+})
+
 
 // Getting all
 router.get('/',async(req,res) => {
