@@ -19,7 +19,5 @@ db.once('open',()=>console.log('Connected to Database'))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const routes = require('../REST-API/routes/router');
-routes(app);
 
 app.listen(process.env.PORT || 3000) 
