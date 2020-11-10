@@ -5,6 +5,9 @@ const app = express();
 const mongoose = require("mongoose"); 
 const bodyParser   = require('body-parser');
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 const companiesRouter = require('./routes/companies')
 const studentsRouter = require('./routes/students')
 
@@ -15,9 +18,5 @@ mongoose.connect(process.env.DATABASE_URL,{ useUnifiedTopology: true, useNewUrlP
 const db = mongoose.connection
 db.on('error',(error)=>console.error(error))
 db.once('open',()=>console.log('Connected to Database'))
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-
+  
 app.listen(process.env.PORT || 3000) 

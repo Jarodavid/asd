@@ -18,8 +18,8 @@ router.get('/:id',getStudent, (req,res) => {
 
 })
 // Creating one
-router.post('/', async (req,res) => {
-    const student = new Student({
+router.post('/', async(req,res) => {
+    const student = await new Student({
         name: req.body.name,
         studentId: req.body.studentId,
         course: req.body.course
@@ -28,9 +28,12 @@ router.post('/', async (req,res) => {
         const newStudent = await student.save()
         res.status(201).json(newStudent)
     }catch(err){
-     res.status(400).json({message: err.message})   
+        res.status(400).json({message: err.message})   
     }
+
 })
+
+
 
 // Updating one
 router.patch('/:id',getStudent,async(req,res) => {
@@ -39,6 +42,9 @@ router.patch('/:id',getStudent,async(req,res) => {
     }
     if(req.body.studentId != null){
         res.student.studentId = req.body.studentId
+    }
+    if(req.body.course != null){
+        res.student.course = req.body.course
     }
     try{
         const updatedStudent =  await res.student.save()
