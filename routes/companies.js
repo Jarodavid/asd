@@ -67,6 +67,15 @@ router.patch('/:id',getCompany,async(req,res) => {
     }
 })
 
+router.delete('/:id',getCompany,async (req,res) => {
+    try{
+        await res.company.remove()
+        res.json({message: 'Deleted Comapany'})
+    }catch(err){
+        res.status(500).json({message: err.message})
+    }
+})
+
 async function getCompany(req, res, next){
     let company
     try{
