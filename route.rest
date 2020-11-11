@@ -47,16 +47,17 @@ Content-Type: application/json
 }
 
 ###
-PATCH  http://localhost:3000/companies/5f7ab9a23015902d48d7a485
+PATCH  http://localhost:3000/companies/5fa9fe4ea680233a94ab7ad9
 Content-Type: application/json
 
 {
-    "company_name": "",
-    "company_address":"",
+    "company_name": "123",
+    "company_address":"123",
     "course": [
-        ""
+        "123"
     ]
 }
-
+###
+DELETE http://localhost:3000/companies/5fa9fe4ea680233a94ab7ad9
 ###
 GET http://localhost:3000/companies?course=CPE
