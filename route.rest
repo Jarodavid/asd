@@ -11,7 +11,7 @@ POST http://localhost:3000/students
 Content-Type: application/json
 
 {
-    "names": "test",
+    "name": "test",
     "studentId": "111",
     "course": "test"
 }
