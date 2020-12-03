@@ -21,7 +21,7 @@ Content-Type: application/json
 DELETE http://localhost:3000/students/5f53482a3622293a7410bddf
 
 ###
-PATCH  http://localhost:3000/students/5f7f7cc70d90cc19e4822e8d
+PUT  http://localhost:3000/students/5f7f7cc70d90cc19e4822e8d
 Content-Type: application/json
 
 {
@@ -47,7 +47,7 @@ Content-Type: application/json
 }
 
 ###
-PATCH  http://localhost:3000/companies/5fa9fe4ea680233a94ab7ad9
+PUT  http://localhost:3000/companies/5fa9fe4ea680233a94ab7ad9
 Content-Type: application/json
 
 {

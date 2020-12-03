@@ -48,7 +48,7 @@ router.post('/', async (req,res) => {
 })
 
 // Updating one
-router.patch('/:id',getCompany,async(req,res) => {
+router.put('/:id',getCompany,async(req,res) => {
     if(req.body.company_name != null){
         res.company.company_name = req.body.company_name
     }
